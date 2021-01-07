@@ -25,7 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         location.delegate = self
         location.requestAlwaysAuthorization()
         location.allowsBackgroundLocationUpdates = true
+        location.startUpdatingLocation() // triggered too wkwkwk
         location.startMonitoringSignificantLocationChanges()
+        
         
         return true
     }
