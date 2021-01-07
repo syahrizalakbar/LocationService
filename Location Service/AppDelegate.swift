@@ -7,14 +7,26 @@
 //
 
 import UIKit
+import CoreLocation
+import Firebase
+import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
-
-
+    
+    let location = CLLocationManager()
+    var firebase: DatabaseReference?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        firebase = Database.database().reference(withPath: "LocationServiceFromKilled")
+        location.delegate = self
+        location.requestAlwaysAuthorization()
+        location.allowsBackgroundLocationUpdates = true
+        location.startMonitoringSignificantLocationChanges()
+        
         return true
     }
 
@@ -30,6 +42,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        firebase?.child("KESINI").setValue([
+            "latitude": locations.last?.coordinate.latitude ?? 0.0,
+            "longitude": locations.last?.coordinate.longitude ?? 0.0,
+        ])
+        print("Dapet significant new tapi foreground")
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        print("Sayang sekali Terminate")
     }
 
 

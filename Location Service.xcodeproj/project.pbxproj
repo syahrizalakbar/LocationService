@@ -13,6 +13,8 @@
 		6A9DAACC25A6C2D500EE3518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9DAACA25A6C2D500EE3518 /* Main.storyboard */; };
 		6A9DAACE25A6C2DB00EE3518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A9DAACD25A6C2DB00EE3518 /* Assets.xcassets */; };
 		6A9DAAD125A6C2DB00EE3518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9DAACF25A6C2DB00EE3518 /* LaunchScreen.storyboard */; };
+		6A9DAAD925A6DE1800EE3518 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A9DAAD825A6DE1800EE3518 /* GoogleService-Info.plist */; };
+		715738E5167CA79D780B0B24 /* Pods_Location_Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD1552E4A647B93E9D60FA7 /* Pods_Location_Service.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		6A9DAACD25A6C2DB00EE3518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A9DAAD025A6C2DB00EE3518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A9DAAD225A6C2DB00EE3518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A9DAAD825A6DE1800EE3518 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9814F7442240C5909001374C /* Pods-Location Service.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Location Service.debug.xcconfig"; path = "Target Support Files/Pods-Location Service/Pods-Location Service.debug.xcconfig"; sourceTree = "<group>"; };
+		ABD1552E4A647B93E9D60FA7 /* Pods_Location_Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Location_Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F11DC0D42263177D0DEEB04F /* Pods-Location Service.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Location Service.release.xcconfig"; path = "Target Support Files/Pods-Location Service/Pods-Location Service.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				715738E5167CA79D780B0B24 /* Pods_Location_Service.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		321A7344C2F6D4914522E639 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABD1552E4A647B93E9D60FA7 /* Pods_Location_Service.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5EF5618FF4D280E7D1E83BF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9814F7442240C5909001374C /* Pods-Location Service.debug.xcconfig */,
+				F11DC0D42263177D0DEEB04F /* Pods-Location Service.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6A9DAAB825A6C2D500EE3518 = {
 			isa = PBXGroup;
 			children = (
 				6A9DAAC325A6C2D500EE3518 /* Location Service */,
 				6A9DAAC225A6C2D500EE3518 /* Products */,
+				5EF5618FF4D280E7D1E83BF8 /* Pods */,
+				321A7344C2F6D4914522E639 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +90,7 @@
 				6A9DAACD25A6C2DB00EE3518 /* Assets.xcassets */,
 				6A9DAACF25A6C2DB00EE3518 /* LaunchScreen.storyboard */,
 				6A9DAAD225A6C2DB00EE3518 /* Info.plist */,
+				6A9DAAD825A6DE1800EE3518 /* GoogleService-Info.plist */,
 			);
 			path = "Location Service";
 			sourceTree = "<group>";
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A9DAAD525A6C2DB00EE3518 /* Build configuration list for PBXNativeTarget "Location Service" */;
 			buildPhases = (
+				5318DB3C5F602EE5713F4F4C /* [CP] Check Pods Manifest.lock */,
 				6A9DAABD25A6C2D500EE3518 /* Sources */,
 				6A9DAABE25A6C2D500EE3518 /* Frameworks */,
 				6A9DAABF25A6C2D500EE3518 /* Resources */,
+				DB438FD88F4D401CAE85EC8B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +156,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A9DAAD125A6C2DB00EE3518 /* LaunchScreen.storyboard in Resources */,
+				6A9DAAD925A6DE1800EE3518 /* GoogleService-Info.plist in Resources */,
 				6A9DAACE25A6C2DB00EE3518 /* Assets.xcassets in Resources */,
 				6A9DAACC25A6C2D500EE3518 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5318DB3C5F602EE5713F4F4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Location Service-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB438FD88F4D401CAE85EC8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Location Service/Pods-Location Service-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Location Service/Pods-Location Service-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Location Service/Pods-Location Service-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6A9DAABD25A6C2D500EE3518 /* Sources */ = {
@@ -282,11 +355,13 @@
 		};
 		6A9DAAD625A6C2DB00EE3518 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9814F7442240C5909001374C /* Pods-Location Service.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJ8K5NG3SQ;
 				INFOPLIST_FILE = "Location Service/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +375,13 @@
 		};
 		6A9DAAD725A6C2DB00EE3518 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F11DC0D42263177D0DEEB04F /* Pods-Location Service.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJ8K5NG3SQ;
 				INFOPLIST_FILE = "Location Service/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
